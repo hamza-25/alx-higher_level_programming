@@ -1,0 +1,18 @@
+#!/bin/bash
+
+read -p "Enter files to add (use space to separate multiple files, or '.' for all): " files_to_add
+read -p "Enter commit message: " commit_message
+
+if [ -z "$commit_message" ]; then
+  echo "Commit message cannot be empty."
+  exit 1
+fi
+
+# Add the specified files to the staging area
+git add $files_to_add
+
+# Commit with the provided message
+git commit -m "$commit_message"
+
+echo "Changes committed with message: $commit_message"
+
