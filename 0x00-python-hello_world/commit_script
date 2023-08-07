@@ -7,8 +7,7 @@ if [ -z "$commit_message" ]; then
   echo "Commit message cannot be empty."
   exit 1
 fi
-#Status before
-git status
+
 # Add the specified files to the staging area
 git add $files_to_add
 # Status after
