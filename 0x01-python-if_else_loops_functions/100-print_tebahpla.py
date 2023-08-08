@@ -10,4 +10,4 @@ for i in range(-122, -96):
         temp *= -1
         temp -= 32
         CAP += 1
-    print("{}".format(chr(i)), end='')
+    print("{}".format(chr(temp)), end='')
