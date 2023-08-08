@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 LESS = "and is less than 6 and not 0"
-GREATER = "and is greater than 5"
+GREAT = "and is greater than 5"
 last_digit = abs(number) % 10
 if number < 0:
     last_digit *= (-1)
