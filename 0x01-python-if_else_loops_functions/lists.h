@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-def islower(c);
+/*def islower(c);
 def uppercase(str);
 def print_last_digit(number);
 def add(a, b);
 def pow(a, b);
-def fizzbuzz();
+def fizzbuzz();*/
 
 /**
  * struct listint_s - singly linked list
