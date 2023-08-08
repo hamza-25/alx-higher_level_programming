@@ -6,6 +6,6 @@ for i in range(-122, -96):
         CAP += 1
     else:
         i *= -1
-        i -= 32 
+        i -= 32
         CAP += 1
     print("{}".format(chr(i)), end="")
