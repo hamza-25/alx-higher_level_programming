@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # uncompyle6 version 3.9.0
 # Python bytecode version base 3.8.0 (3413)
-# Decompiled from: Python 3.8.10 (default, May 26 2023, 14:05:08) 
+# Decompiled from: Python 3.8.10 (default, May 26 2023, 14:05:08)
 # [GCC 9.4.0]
 # Embedded file name: hidden_4.py
 # Compiled at: 2021-07-16 17:16:33
