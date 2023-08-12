@@ -30,6 +30,8 @@ listint_t *duplicate_list(listint_t *head)
 	if (!head)
 		return (NULL);
 	first_node = create_node(head->n);
+	if (!first_node)
+		return (NULL);
 	dup = first_node;
 	c_head = head->next;
 	while (c_head)
