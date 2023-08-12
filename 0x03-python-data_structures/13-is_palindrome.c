@@ -35,6 +35,8 @@ listint_t *duplicate_list(listint_t *head)
 	while (c_head)
 	{
 		dup->next = create_node(c_head->n);
+		if (dup->next == NULL)
+			return (NULL);
 		dup = dup->next;
 		c_head = c_head->next;
 	}
