@@ -35,8 +35,6 @@ listint_t *duplicate_list(listint_t *head)
 	while (c_head)
 	{
 		dup->next = create_node(c_head->n);
-		if (dup->next == NULL)
-			return (NULL);
 		dup = dup->next;
 		c_head = c_head->next;
 	}
@@ -53,8 +51,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head, *next, *pre = NULL, *dup = NULL;
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
+	/*if (*head == NULL || (*head)->next == NULL)
+		return (1);*/
 	dup = duplicate_list(*head);
 	if (!dup)
 		return (1);
