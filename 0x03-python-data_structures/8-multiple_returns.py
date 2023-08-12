@@ -5,7 +5,7 @@ def multiple_returns(sentence):
     for i in sentence:
         length += 1
     if sentence[0] == " ":
-        char = None
+        char = 'None'
     else:
         char = sentence[0]
     tup = (length, char)
