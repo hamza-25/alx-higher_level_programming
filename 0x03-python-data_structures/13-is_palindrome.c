@@ -55,7 +55,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	dup = duplicate_list(*head);
 	if (!dup)
-		return (NULL);
+		return (1);
 	while (current)
 	{
 		next = current->next;
