@@ -68,9 +68,13 @@ int is_palindrome(listint_t **head)
 	while (dup)
 	{
 		if (current->n != dup->n)
+		{
+			free(dup);
 			return (0);
+		}
 		current = current->next;
 		dup = dup->next;
 	}
+	free(dup);
 	return (1);
 }
