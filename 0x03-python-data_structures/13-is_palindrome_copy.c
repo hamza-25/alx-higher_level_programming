@@ -49,33 +49,33 @@ listint_t *duplicate_list(listint_t *head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head, *next, *pre = NULL;
-	listint_t *slow = *head, *fast = *head;
+	listint_t *current = *head, *next, *pre = NULL, *dup = NULL, *f;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	while (fast && fast->next)
+	dup = duplicate_list(*head);
+	f = dup;
+	if (!dup)
+		return (1);
+	while (current)
 	{
-		fast = fast->next->next;
-		slow = slow->next;
+		next = current->next;
+		current->next = pre;
+		pre = current;
+		current = next;
 	}
-	while (slow)
-	{
-		next = slow->next;
-		slow->next = pre;
-		pre = slow;
-		slow = next;
-	}
-	slow = pre;
+	*head = pre;
 	current = *head;
-	while (current && slow)
+	while (dup)
 	{
-		if (current->n != slow->n)
+		if (current->n != dup->n)
 		{
+			free_listint(f);
 			return (0);
 		}
 		current = current->next;
-		slow = slow->next;
+		dup = dup->next;
 	}
+	free_listint(f);
 	return (1);
 }
