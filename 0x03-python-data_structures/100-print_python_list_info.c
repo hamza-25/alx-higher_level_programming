@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <Python.h>
-
+#include "lists.h"
 /**
  * print_python_list_info - Prints basic information about a Python list.
  * @p: Pointer to the Python list object.
