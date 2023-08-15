@@ -1,7 +1,7 @@
 <h2>Python - Data Structures: Lists, Tuples</h2>
 <hr>
 <b>General</b>
-<p>
+
 <ul>
   <li>Why Python programming is awesome
 </li>
@@ -26,4 +26,3 @@
   <li>What is the del statement and how to use it  
 </li>  
 </ul>
-</p>
