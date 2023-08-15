@@ -24,8 +24,6 @@
   <li>What is sequence unpacking
 </li>
   <li>What is the del statement and how to use it  
-</li>
->
-  
+</li>  
 </ul>
 </p>
