@@ -8,5 +8,5 @@ def uniq_add(my_list=[]):
                 break
             list_len -= 1
         else:
-            total += my_list[i]
+            total += my_list[i] + 1
     return total
