@@ -22,7 +22,6 @@ class Square:
 
     @size.setter
     def size(self, new_name):
-        """set the value of private attrb size"""
         if type(new_name) is not int:
             raise TypeError("size must be an integer")
         if new_name < 0:
@@ -36,7 +35,6 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """set position."""
         if (type(value[0]) is not int or
                 type(value[1]) is not int or
                 len(value) != 2):
