@@ -6,7 +6,14 @@
 class Square:
     """Represent of square."""
     def __init__(self, size=0, position=(0, 0)):
-        """init function ran every time we create an object."""
+        """init function ran every time we create an object.
+        
+         Args:
+            size (int): square size.
+            position (int, int): The square position.
+
+            
+        """
         self.__size = size
         self.__position = position
 
