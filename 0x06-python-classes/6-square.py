@@ -17,11 +17,12 @@ class Square:
 
     @property
     def size(self):
+        """get the value of private attrb size"""
         return self.__size
 
     @size.setter
     def size(self, new_name):
-        """get the value of private attrb size"""
+        """set the value of private attrb size"""
         if type(new_name) is not int:
             raise TypeError("size must be an integer")
         if new_name < 0:
@@ -30,15 +31,18 @@ class Square:
 
     @property
     def position(self):
+        """get position."""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """set position."""
         if type(value[0]) is not int or type(value[1]) is not int or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def my_print(self):
+        """porperty that print char before #."""
         if self.__size == 0:
             print()
         else:
