@@ -47,7 +47,6 @@ class Square:
         """porperty that print char before #."""
         if self.__size == 0:
             print()
-            return
         else:
             [print("") for i in range(0, self.__position[1])]
             for i in range(self.__size):
