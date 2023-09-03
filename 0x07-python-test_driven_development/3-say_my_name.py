@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""."""
+"""define sya hello function."""
 
 
 def say_my_name(first_name, last_name=""):
