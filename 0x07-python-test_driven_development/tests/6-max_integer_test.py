@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([54]), 54)
         self.assertEqual(max_integer(list(range(20))), 19)
         self.assertEqual(max_integer([101, 52, 4,52, 4, 101, 4]), 101)
-        self.assertEqual(max_integer(["f", "g", "a"]), "a")
+        self.assertEqual(max_integer(["f", "z", "a"]), "z")
     def test_input_empty_list(self):
         """function that test with empty list.
         """
