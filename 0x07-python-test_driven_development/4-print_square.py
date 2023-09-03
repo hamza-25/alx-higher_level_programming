@@ -5,7 +5,7 @@
 def print_square(size):
     """function that print square
         Args:
-            @size: required number int 
+            @size: required number int
         Errors:
             TypeError, ValueError
     """
