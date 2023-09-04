@@ -14,10 +14,11 @@ class Rectangle():
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """init function."""
-        self.height = height
+        """init function
+        """
         self.width = width
-        type(self).number_of_instances += 1
+        self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -49,17 +50,17 @@ class Rectangle():
 
     def area(self):
         """calculate the area of rectangle"""
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """calculate the perimeter of rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return ((self.__width + self.__height) * 2)
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
         """__str__ print the rectangle with the character #."""
-        shape = ""
+        shape = ''
         if self.__width == 0 or self.__height == 0:
             return shape
         for h in range(self.__height):
@@ -71,12 +72,12 @@ class Rectangle():
 
     def __repr__(self):
         """__repr__ official represesntation"""
-        return (f"Rectangle({self.__width}, {self.__height})")
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """delete object"""
         print("Bye rectangle...")
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -85,18 +86,11 @@ class Rectangle():
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() == rect_2.area():
-            return rect_1
-        elif rect_1.area() > rect_2.area():
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             rect_2
 
     @classmethod
     def square(cls, size=0):
-        """function that return same width and height
-
-            Args:
-                size (int): int value to assign width and height
-        """
         return cls(size, size)
