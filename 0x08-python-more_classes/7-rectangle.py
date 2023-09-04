@@ -64,10 +64,10 @@ class Rectangle():
             return shape
         for h in range(self.height):
             for w in range(self.width):
-                shape += self.print_symbol
+                shape += ("".join(self.print_symbol))
             if not (h + 1) == self.height:
                 shape += "\n"
-        return ("".join(shape))
+        return shape
 
     def __repr__(self):
         """__repr__ official represesntation"""
