@@ -4,7 +4,7 @@
 
 class Rectangle():
     """define rectangle class
-    
+
     Attributes:
         number_of_instances (int): The number of each new Rectangle instances.
         print_symbol (any): The symbol used for string representation.
