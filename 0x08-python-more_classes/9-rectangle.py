@@ -57,27 +57,6 @@ class Rectangle():
             return 0
         return ((self.width + self.height) * 2)
 
-    def __str__(self):
-        """__str__ print the rectangle with the character #."""
-        shape = ""
-        if self.width == 0 or self.height == 0:
-            return shape
-        for h in range(self.height):
-            for w in range(self.width):
-                shape += ("".join(str(self.print_symbol)))
-            if not (h + 1) == self.height:
-                shape += "\n"
-        return shape
-
-    def __repr__(self):
-        """__repr__ official represesntation"""
-        return (f"Rectangle({self.width}, {self.height})")
-
-    def __del__(self):
-        """delete object"""
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -98,3 +77,25 @@ class Rectangle():
                 size (int): int value to assign width and height
         """
         return (cls(size, size))
+
+
+    def __str__(self):
+        """__str__ print the rectangle with the character #."""
+        shape = ""
+        if self.width == 0 or self.height == 0:
+            return shape
+        for h in range(self.height):
+            for w in range(self.width):
+                shape += ("".join(str(self.print_symbol)))
+            if not (h + 1) == self.height:
+                shape += "\n"
+        return shape
+
+    def __repr__(self):
+        """__repr__ official represesntation"""
+        return (f"Rectangle({self.width}, {self.height})")
+
+    def __del__(self):
+        """delete object"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
