@@ -81,7 +81,7 @@ class Rectangle():
 
     def __str__(self):
         """__str__ print the rectangle with the character #."""
-        shape = []
+        shape = ""
         if self.__width == 0 or self.__height == 0:
             return shape
         for h in range(self.__height):
