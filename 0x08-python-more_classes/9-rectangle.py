@@ -78,7 +78,6 @@ class Rectangle():
         """
         return (cls(size, size))
 
-
     def __str__(self):
         """__str__ print the rectangle with the character #."""
         shape = ""
