@@ -82,18 +82,18 @@ class Rectangle():
     def __str__(self):
         """__str__ print the rectangle with the character #."""
         shape = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return shape
-        for h in range(self.height):
-            for w in range(self.width):
+        for h in range(self.__height):
+            for w in range(self.__width):
                 shape += ("".join(str(self.print_symbol)))
-            if not (h + 1) == self.height:
+            if not (h + 1) == self.__height:
                 shape += "\n"
         return shape
 
     def __repr__(self):
         """__repr__ official represesntation"""
-        return (f"Rectangle({self.width}, {self.height})")
+        return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
         """delete object"""
