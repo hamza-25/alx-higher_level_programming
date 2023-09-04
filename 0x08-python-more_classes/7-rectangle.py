@@ -64,7 +64,7 @@ class Rectangle():
             return shape
         for h in range(self.height):
             for w in range(self.width):
-                shape += Rectangle.print_symbol
+                shape += self.print_symbol
             if not (h + 1) == self.height:
                 shape += "\n"
         return shape
