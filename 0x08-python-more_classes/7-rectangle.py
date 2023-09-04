@@ -12,7 +12,7 @@ class Rectangle():
         """init function."""
         self.height = height
         self.width = width
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -59,7 +59,7 @@ class Rectangle():
             return shape
         for h in range(self.height):
             for w in range(self.width):
-                shape += type(self).print_symbol
+                shape += Rectangle.print_symbol
             if not (h + 1) == self.height:
                 shape += "\n"
         return shape
@@ -71,4 +71,4 @@ class Rectangle():
     def __del__(self):
         """delete object"""
         print("Bye rectangle...")
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
