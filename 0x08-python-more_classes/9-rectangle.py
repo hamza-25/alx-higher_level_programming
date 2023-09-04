@@ -93,4 +93,8 @@ class Rectangle():
 
     @classmethod
     def square(cls, size=0):
+        """function that return same width and height
+            Args:
+                size (int): int value to assign width and height
+        """
         return (cls(size, size))
