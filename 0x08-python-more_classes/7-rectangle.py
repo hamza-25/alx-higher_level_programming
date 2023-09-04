@@ -67,7 +67,7 @@ class Rectangle():
                 shape += self.print_symbol
             if not (h + 1) == self.height:
                 shape += "\n"
-        return shape
+        return ("".join(shape))
 
     def __repr__(self):
         """__repr__ official represesntation"""
