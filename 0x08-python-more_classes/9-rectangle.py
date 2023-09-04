@@ -81,15 +81,15 @@ class Rectangle():
 
     def __str__(self):
         """__str__ print the rectangle with the character #."""
-        shape = ""
+        shape = []
         if self.__width == 0 or self.__height == 0:
             return shape
         for h in range(self.__height):
             for w in range(self.__width):
-                shape += ("".join(str(self.print_symbol)))
+                shape.append(str(self.print_symbol))
             if not (h + 1) == self.__height:
-                shape += "\n"
-        return shape
+                shape.append("\n")
+        return ("".join(shape))
 
     def __repr__(self):
         """__repr__ official represesntation"""
