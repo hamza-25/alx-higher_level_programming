@@ -49,13 +49,13 @@ class Rectangle():
 
     def area(self):
         """calculate the area of rectangle"""
-        return (self.width * self.height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """calculate the perimeter of rectangle"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return ((self.width + self.height) * 2)
+        return ((self.__width + self.__height) * 2)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
