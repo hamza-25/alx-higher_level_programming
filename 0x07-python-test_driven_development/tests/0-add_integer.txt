@@ -24,6 +24,9 @@ Usage:
 	>>> add_integer(-10, 10)
 	0
 
+	>>> add_integer(10, -9)
+	1
+
 	>>> add_integer(3.45)
 	101
 
@@ -32,3 +35,6 @@ Usage:
 
 	>>> add_integer(-3.5, -4.0)
 	-7
+
+	>>> add_integer(3.5, 4.0)
+	7
