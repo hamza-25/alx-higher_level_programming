@@ -34,3 +34,10 @@ Usage:
 	>>> print(matrix_divided([[1,2],[5,2]]))
 	Traceback (most recent call last):
 	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	>>> matrix = "string"
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	File "<stdin>", line 1, in <module>
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
