@@ -6,10 +6,12 @@ Usage:
 	>>> print(matrix_divided(matrix, 2))
 	[[1.0, 2.0], [3.0, 4.0], [5.0, 1.0]]
 
+	>>> matrix = [[2, 4], [6, 8], [10, 2]]
 	>>> print(matrix_divided(matrix, "hf"))
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
+	>>> matrix = [[2, 4], [6, 8], [10, 2]]
 	>>> print(matrix_divided(matrix, 0))
         Traceback (most recent call last):
         ZeroDivisionError: division by zero
