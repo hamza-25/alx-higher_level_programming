@@ -19,7 +19,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
-            not all(isinstance(elem, (int, float)) for rows in matrix for elem in rows)):
+            not all(isinstance(elem, int) for rows in matrix for elem in rows)):
         msg = "matrix must be a matrix (list of lists) of integers/floats"
         raise TypeError(msg)
     row_len = []
