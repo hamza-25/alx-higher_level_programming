@@ -38,3 +38,7 @@ Usage:
 
 	>>> add_integer(3.5, 4.0)
 	7
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
