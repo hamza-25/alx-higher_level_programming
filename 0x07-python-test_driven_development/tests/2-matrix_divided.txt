@@ -41,3 +41,10 @@ Usage:
 	File "<stdin>", line 1, in <module>
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> >>> matrix = [[2, 4], [6, 8], [10, 2]]
+	>>> print(matrix_divided(matrix, "sttr"))
+	Traceback (most recent call last):
+  	File "<stdin>", line 1, in <module>
+  	...
+	TypeError: div must be a number
