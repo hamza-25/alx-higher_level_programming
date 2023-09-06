@@ -38,5 +38,6 @@ Usage:
 	>>> matrix = "string"
 	>>> print(matrix_divided(matrix, 3))
 	Traceback (most recent call last):
+	File "<stdin>", line 1, in <module>
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
