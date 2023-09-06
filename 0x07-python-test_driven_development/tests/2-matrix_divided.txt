@@ -24,3 +24,11 @@ Usage:
 
 	>>> print(matrix_divided([[10, 5, 6], [10, -5, 6]], -2))
 	[[-5.0, -2.5, -3.0], [-5.0, 2.5, -3.0]]
+
+	>>> print(matrix_divided())
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+	>>> print(matrix_divided([[1,2],[5,2]]))
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
