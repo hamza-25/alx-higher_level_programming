@@ -6,12 +6,18 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
-        """square inintialization"""
+        """square inintialization
+            Args:
+                size: height of rectangle
+                x: int number
+                y: int  number
+                id: id of objt
+        """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """func that set size of square"""
+        """representation of func that set size of square"""
         return self.width
 
     @size.setter
@@ -24,7 +30,7 @@ class Square(Rectangle):
         self.__height = value
 
     def update(self, *args, **kwargs):
-        """update square"""
+        """representation of method update square"""
         if args and len(args) != 0:
             index = 0
             for arg in args:
@@ -64,6 +70,6 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """func that print info about suqare"""
+        """representation of func that print info about suqare"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
