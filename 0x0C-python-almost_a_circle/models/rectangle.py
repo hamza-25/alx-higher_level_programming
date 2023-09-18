@@ -151,7 +151,7 @@ class Rectangle(Base):
                     self.__x = value
                 elif key == "y":
                     self.__y = value
-    
+
     def to_dictionary(self):
         """representation of a rectangle
         Return dict"""
