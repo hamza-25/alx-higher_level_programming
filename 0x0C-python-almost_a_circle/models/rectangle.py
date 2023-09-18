@@ -33,7 +33,7 @@ class Rectangle(Base):
 
         if y < 0:
             raise ValueError("y must be >= 0")
-        
+
         self.__height = height
         self.__width = width
         self.x = x
@@ -43,7 +43,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """func that set width"""
-        
+
         return self.__width
 
     @width.setter
@@ -57,7 +57,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """func that set height"""
-        
+
         return self.__height
 
     @height.setter
@@ -84,7 +84,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """func that set y"""
-        
+
         return self.__y
 
     @y.setter
@@ -101,7 +101,7 @@ class Rectangle(Base):
 
     def display(self):
         """func that disply area"""
-        
+
         for line in range(self.y):
             print()
         for i in range(self.height):
@@ -147,4 +147,3 @@ class Rectangle(Base):
                     self.__x = value
                 elif key == "y":
                     self.__y = value
-
