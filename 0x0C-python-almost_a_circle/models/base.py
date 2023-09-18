@@ -45,3 +45,16 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create."""
+
+        if dictionary and dictionary != {}:
+            if cls.__name__ != "Rectangle":
+                newest = cls(1)
+            else:
+                newest = cls(1, 1)
+            newest.update(**dictionary)
+            return newest
+
