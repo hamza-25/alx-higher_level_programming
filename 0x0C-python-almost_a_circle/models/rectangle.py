@@ -112,7 +112,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """representation of rectangle usign #"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+               )
+
     def update(self, *args, **kwargs):
         """func tha update value of rectangle"""
         if args and len(args) != 0:
