@@ -5,10 +5,19 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """representation of rectangle"""
+    """representation of rectangle
+        take inherit from Base class
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize rectangle class"""
+        """Initialize rectangle class
+            Args:
+                width: width of rectangle
+                height: height of rectangle
+                x: int number
+                y: int  number
+                id: id of objt
+        """
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
@@ -42,7 +51,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """func that set width"""
+        """representation of func that set width"""
 
         return self.__width
 
@@ -56,7 +65,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """func that set height"""
+        """representation of func that set height"""
 
         return self.__height
 
@@ -70,7 +79,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """func that set x"""
+        """representation of func that set x"""
         return self.__x
 
     @x.setter
@@ -83,7 +92,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """func that set y"""
+        """representation of func that set y"""
 
         return self.__y
 
@@ -96,11 +105,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """func that calculate area"""
+        """representation of func that calculate area"""
         return self.width * self.height
 
     def display(self):
-        """func that disply area"""
+        """representation of func that disply area"""
 
         for line in range(self.y):
             print()
@@ -118,7 +127,7 @@ class Rectangle(Base):
                )
 
     def update(self, *args, **kwargs):
-        """func tha update value of rectangle"""
+        """representation of func tha update value of rectangle"""
         if args and len(args) != 0:
             index = 0
             for arg in args:
@@ -153,8 +162,7 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
-        """representation of a rectangle
-        Return dict"""
+        """representation of a rectangle (to_dictionary) Return dict"""
 
         return {
             "id": self.id,
