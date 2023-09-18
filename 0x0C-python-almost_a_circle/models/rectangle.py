@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""define rectangle class"""
+
 from models.base import Base
 
 
 class Rectangle(Base):
+    """representation of rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize rectangle class"""
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
@@ -38,6 +42,8 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """func that set width"""
+        
         return self.__width
 
     @width.setter
@@ -50,6 +56,8 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """func that set height"""
+        
         return self.__height
 
     @height.setter
@@ -62,6 +70,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """func that set x"""
         return self.__x
 
     @x.setter
@@ -74,6 +83,8 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """func that set y"""
+        
         return self.__y
 
     @y.setter
@@ -85,9 +96,12 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """func that calculate area"""
         return self.width * self.height
 
     def display(self):
+        """func that disply area"""
+        
         for line in range(self.y):
             print()
         for i in range(self.height):
@@ -97,8 +111,10 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """representation of rectangle usign #"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     def update(self, *args, **kwargs):
+        """func tha update value of rectangle"""
         if args and len(args) != 0:
             index = 0
             for arg in args:
