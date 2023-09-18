@@ -51,10 +51,10 @@ class Base:
         """create."""
 
         if dictionary and dictionary != {}:
-            if cls.__name__ != "Rectangle":
-                newest = cls(1)
-            else:
+            if cls.__name__ == "Rectangle":
                 newest = cls(1, 1)
+            else:
+                newest = cls(1)
             newest.update(**dictionary)
             return newest
 
