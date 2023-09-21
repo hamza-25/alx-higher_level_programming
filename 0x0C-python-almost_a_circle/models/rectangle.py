@@ -16,6 +16,7 @@ class Rectangle(Base):
                 x: int number
                 y: int  number
                 id: id of objt
+        """
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
@@ -40,7 +41,6 @@ class Rectangle(Base):
 
         if y < 0:
             raise ValueError("y must be >= 0")
-        """
 
         super().__init__(id)
         self.__width = width
