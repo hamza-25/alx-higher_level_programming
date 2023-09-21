@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """define rectangle class"""
-
 from models.base import Base
 
 
@@ -17,7 +16,7 @@ class Rectangle(Base):
                 x: int number
                 y: int  number
                 id: id of objt
-        """
+    
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
@@ -42,12 +41,13 @@ class Rectangle(Base):
 
         if y < 0:
             raise ValueError("y must be >= 0")
+        """
 
-        self.__height = height
-        self.__width = width
+        super().__init__(id)
+        self.width = width
+        self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
