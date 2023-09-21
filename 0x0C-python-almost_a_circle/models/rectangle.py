@@ -16,7 +16,6 @@ class Rectangle(Base):
                 x: int number
                 y: int  number
                 id: id of objt
-    
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
