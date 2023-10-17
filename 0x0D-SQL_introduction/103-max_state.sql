@@ -3,4 +3,4 @@
 SELECT state, MAX(value) AS max_temp
 FROM temperatures
 GROUP BY city
-ORDER BY avg_temp DESC
+ORDER BY max_temp DESC
