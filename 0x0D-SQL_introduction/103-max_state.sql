@@ -2,5 +2,5 @@
 -- (ordered by State name).
 SELECT state, MAX(value) AS max_temp
 FROM temperatures
-GROUP BY city
-ORDER BY max_temp DESC
+GROUP BY state
+ORDER BY state
