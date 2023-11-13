@@ -4,12 +4,17 @@ if (argv.length <= 3) {
   console.log(0);
 } else if (argv.length >= 4) {
   const myArray = argv.slice(2).map(value => parseFloat(value)).filter(value => !isNaN(value));
-  const nMax = Math.max(...myArray);
+  myArray.sort(function (a, b) {
+    return a - b;
+  });
+  myArray.reverse();
+  console.log(myArray[1]);
+  /* const nMax = Math.max(...myArray);
   let second = myArray[0];
   for (const num1 in myArray) {
     if (myArray[num1] > second && myArray[num1] !== nMax) {
       second = myArray[num1];
     }
   }
-  console.log(second);
+  console.log(second); */
 }
