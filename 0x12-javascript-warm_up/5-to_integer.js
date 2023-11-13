@@ -10,5 +10,9 @@ const argLenght = i;
 if (argLenght === 2) {
   console.log('Not a number');
 } else if (argLenght >= 3) {
-  console.log(parseInt(argv[2]));
+  if (isNaN(argv[2])) {
+	console.log('Not a number');
+  } else {
+	  console.log(parseInt(argv[2]));
+  }
 }
