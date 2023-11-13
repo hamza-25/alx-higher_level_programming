@@ -1,8 +1,6 @@
 #!/usr/bin/node
 const argv = process.argv;
-if (argv.length === 2) {
-  console.log(0);
-} else if (argv.length === 3) {
+if (argv.length <== 3) {
   console.log(0);
 } else if (argv.length >= 4) {
   const myArray = argv.slice(2).map(value => parseFloat(value)).filter(value => !isNaN(value));
