@@ -13,5 +13,7 @@ if (argv.length === 2) {
       }
       console.log(str);
     }
+  } else if (isNaN(num)) {
+    console.log('Missing size');
   }
 }
