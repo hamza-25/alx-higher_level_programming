@@ -2,7 +2,9 @@
 const argv = process.argv;
 let i = 0;
 for (const element of argv) {
-  i++;
+  if (element) {
+    i++;
+  }
 }
 const argLenght = i;
 if (argLenght === 2) {
