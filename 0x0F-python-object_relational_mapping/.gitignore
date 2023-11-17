@@ -1,3 +1,4 @@
 commit*
 mysql_run
 *.sql
+6-model_state.sql
