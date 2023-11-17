@@ -15,5 +15,5 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for state in rows:
         print(state)
-    cursor.close()
+    cur.close()
     db.close()
