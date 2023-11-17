@@ -21,7 +21,7 @@ if __name__ == '__main__':
     session.add(new_state)
     session.commit()
     all_states = session.query(State)\
- .filter(State.name.like('Louisiana')).all()
+     .filter(State.name.like('Louisiana')).all()
     if all_states:
         for state in all_states:
             print("{}".format(state.id))
