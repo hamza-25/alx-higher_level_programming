@@ -14,10 +14,10 @@ if __name__ == '__main__':
     str_db = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(str_db.format(argv[1], argv[2], argv[3]))
 
-    Base.metadata.bind = engine
     Session = sessionmaker(bind=engine)
     session = Session()
 
     all_states = session.query(State).order_by(State.id).filter(State.name.like('%a%')).all()
-    print("{}: {}".format(state.id, state.name))
+    for state in all_states:
+        print("{}: {}".format(state.id, state.name))
     session.close()
