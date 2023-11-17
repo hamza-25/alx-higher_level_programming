@@ -10,11 +10,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 if __name__ == '__main__':
-    engine = create_engine(
-            'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
-                argv[2],
-                argv[3])
-            )
+    str_db = 'mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine(str_db.format(argv[1], argv[2], argv[3]))
 
     Base.metadata.bind = engine
     Session = sessionmaker(bind=engine)
