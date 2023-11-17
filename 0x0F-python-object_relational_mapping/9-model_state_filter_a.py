@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 if __name__ == '__main__':
-    str_db = 'mysql+mysqldb://{}:{}@localhost/{}'
+    str_db = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(str_db.format(argv[1], argv[2], argv[3]))
 
     Base.metadata.bind = engine
@@ -19,9 +19,5 @@ if __name__ == '__main__':
     session = Session()
 
     all_states = session.query(State).filter(State.name.like('%a%')).all()
-    if all_states:
-        for state in all_states:
-            print("{}: {}".format(state.id, state.name))
-    else:
-        print('Nothing')
+    print("{}: {}".format(state.id, state.name))
     session.close()
