@@ -21,8 +21,6 @@ if __name__ == '__main__':
     all_states = session.query(State).first()
     if all_states:
         print("{}: {}".format(all_states.id, all_states.name))
-        #for state in all_states:
-        #    print("{}: {}".format(state.id, state.name))
     else:
         print('Nothing')
     session.close()
