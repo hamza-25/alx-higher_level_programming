@@ -14,4 +14,3 @@ def find_peak(list_of_integers):
         if list_of_integers[i] > rev:
             rev = list_of_integers[i]
     return rev
-
