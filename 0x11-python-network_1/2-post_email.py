@@ -6,4 +6,4 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1] + '?email=' + sys.argv[2]
     with request.urlopen(url) as f:
-        print(f.read())
+        print(f.read().decode('utf-8'))
