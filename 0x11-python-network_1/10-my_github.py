@@ -2,11 +2,12 @@
 """define url module"""
 
 import requests
+from requests.auth import HTTPBasicAuth
 import sys
 if __name__ == "__main__":
-    url = f'https://api.github.com/user/{sys.argv[1]}'
-    headers = {"Authorization": f'token {sys.argv[2]}'}
-    r = requests.get(url, headers=headers)
+    url = "https://api.github.com/user"
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get(url, auth=auth)
     if r.status_code == 200:
         r_json = r.json()
         user_id = r_json.get('id')
