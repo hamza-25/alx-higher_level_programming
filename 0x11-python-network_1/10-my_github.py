@@ -4,7 +4,7 @@
 import requests
 import sys
 if __name__ == "__main__":
-    url = f"https://api.github.com/user/sys.argv[1]}"
+    url = f'https://api.github.com/user/sys.argv[1]}'
     header = {"Authorization": f'token {sys.argv[2]}'}
     r = requests.get(url, headers=header)
     if r.status_code == 200:
