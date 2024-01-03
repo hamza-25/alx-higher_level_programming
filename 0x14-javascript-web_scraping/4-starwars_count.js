@@ -10,10 +10,9 @@ request.get(url, (err, response, body) => {
   }
   const obj = JSON.parse(body);
   let countChar = 0;
-  const charId = 'https://swapi-api.alx-tools.com/api/people/18/';
   for (let i = 0; i < obj.results.length; i++) {
     for (let j = 0; j < obj.results[i].characters.length; j++) {
-      if (obj.results[i].characters[j] === charId) {
+      if (obj.results[i].characters[j].endsWith('/18/')) {
         countChar++;
       }
     }
