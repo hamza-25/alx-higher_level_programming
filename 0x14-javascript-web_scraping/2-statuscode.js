@@ -6,5 +6,5 @@ request.get(args[2], (err, response) => {
     console.log(err);
     return;
   }
-  console.log('code: ', response.statusCode);
+  console.log('code:', response.statusCode);
 });
